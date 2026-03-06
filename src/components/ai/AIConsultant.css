@@ -1,0 +1,351 @@
+.ai-consultant-section.empty-state {
+    display: flex;
+    justify-content: center;
+    padding: 2rem 0;
+}
+
+.start-card {
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+}
+
+.ai-icon.large {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 1.5rem;
+}
+
+.btn-start-analysis {
+    margin-top: 1.5rem;
+    padding: 12px 32px;
+    background: #3AA6B9;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-start-analysis:hover {
+    background: #2D8E9F;
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(58, 166, 185, 0.4);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.ai-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.ai-title-row {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.btn-refresh-ai {
+    background: rgba(58, 166, 185, 0.1);
+    border: 1px solid rgba(58, 166, 185, 0.2);
+    color: #3AA6B9;
+    padding: 8px 16px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: all 0.2s;
+}
+
+.btn-refresh-ai:hover:not(:disabled) {
+    background: rgba(58, 166, 185, 0.2);
+    transform: translateY(-2px);
+}
+
+.btn-refresh-ai:disabled {
+    opacity: 0.7;
+    cursor: wait;
+}
+
+.spinning svg {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.ai-icon {
+    color: #3AA6B9;
+    filter: drop-shadow(0 0 8px rgba(58, 166, 185, 0.4));
+}
+
+.ai-title-group h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: var(--primary);
+}
+
+.ai-status {
+    font-size: 0.8rem;
+    color: #7ED957;
+    font-weight: 500;
+}
+
+.ai-intelligence-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.ai-intel-card {
+    background: var(--card-bg);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--card-border);
+    border-radius: 20px;
+    padding: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.ai-intel-card:hover {
+    transform: translateY(-5px);
+    background: rgba(14, 165, 233, 0.05);
+}
+
+.intel-header {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom: 1rem;
+    color: #3AA6B9;
+}
+
+.intel-header h3 {
+    margin: 0;
+    font-size: 1rem;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.prediction .predicted-value {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+}
+
+.prediction .unit {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin-left: 8px;
+    font-weight: 400;
+}
+
+.prediction .reasoning {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    line-height: 1.4;
+}
+
+.optimization.intel-header {
+    color: #FFD700;
+}
+
+.intel-body .usage-area,
+.intel-body .savings {
+    font-size: 0.95rem;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+}
+
+.intel-body span {
+    color: var(--text-secondary);
+    margin-right: 8px;
+}
+
+.ai-recommendations-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.ai-recommendation-card {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 16px;
+    padding: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.ai-recommendation-card:hover {
+    background: rgba(14, 165, 233, 0.05);
+    border-color: rgba(14, 165, 233, 0.3);
+}
+
+.ai-recommendation-card.critical {
+    background: rgba(239, 68, 68, 0.05);
+    border-color: rgba(239, 68, 68, 0.2);
+}
+
+.rec-header {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.bulb-icon {
+    color: #FFD700;
+    flex-shrink: 0;
+}
+
+.rec-info {
+    flex: 1;
+}
+
+.rec-info h4 {
+    margin: 0 0 4px 0;
+    font-size: 1.1rem;
+    color: var(--primary);
+}
+
+.rec-info p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.4;
+}
+
+.rec-impact {
+    text-align: right;
+}
+
+.impact-label {
+    display: block;
+    font-size: 0.7rem;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+}
+
+.impact-value {
+    font-weight: 700;
+    color: #7ED957;
+}
+
+.rec-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid var(--card-border);
+    padding-top: 1rem;
+    margin-top: 0.5rem;
+}
+
+.btn-reasoning {
+    background: none;
+    border: none;
+    color: #3AA6B9;
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.btn-reasoning:hover {
+    color: #7AECFF;
+}
+
+.btn-apply {
+    background: #3AA6B9;
+    color: white;
+    border: none;
+    padding: 6px 16px;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-apply:hover {
+    background: #2D8E9F;
+    transform: translateX(4px);
+}
+
+.reasoning-drawer {
+    background: rgba(14, 165, 233, 0.05);
+    border-radius: 12px;
+    padding: 1rem;
+    margin-top: 1rem;
+    font-size: 0.85rem;
+    color: var(--text-primary);
+    line-height: 1.5;
+}
+
+.confidence {
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+}
+
+.confidence strong {
+    color: #7ED957;
+}
+
+.ai-consultant-loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem;
+    color: var(--text-secondary);
+    gap: 1.5rem;
+}
+
+.loader {
+    width: 40px;
+    height: 40px;
+    border: 3px solid rgba(58, 166, 185, 0.1);
+    border-top-color: #3AA6B9;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}

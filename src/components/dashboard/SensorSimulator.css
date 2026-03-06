@@ -1,0 +1,148 @@
+.simulator-card {
+    border-left: 4px solid #a855f7 !important;
+}
+
+.simulator-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.sim-desc {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
+.upload-zone {
+    border: 2px dashed var(--card-border);
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: var(--card-bg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.upload-zone:hover {
+    border-color: rgba(168, 85, 247, 0.5);
+    background: rgba(168, 85, 247, 0.05);
+}
+
+.upload-icon {
+    color: #a855f7;
+}
+
+.file-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.file-info strong {
+    color: var(--primary);
+}
+
+.file-info span {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+.sim-alert {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+}
+
+.sim-alert.error {
+    background: rgba(239, 68, 68, 0.1);
+    color: #ef4444;
+    border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+.sim-alert.success {
+    background: rgba(34, 197, 94, 0.1);
+    color: #22c55e;
+    border: 1px solid rgba(34, 197, 94, 0.2);
+}
+
+.sim-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn-template {
+    background: transparent;
+    color: var(--text-secondary);
+    border: 1px solid var(--card-border);
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-template:hover {
+    background: rgba(14, 165, 233, 0.05);
+    color: var(--primary);
+}
+
+.playback-controls button {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 10px 24px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-play {
+    background: #a855f7;
+    color: white;
+}
+
+.btn-play:hover:not(:disabled) {
+    background: #9333ea;
+    box-shadow: 0 0 15px rgba(168, 85, 247, 0.4);
+}
+
+.btn-play:disabled {
+    background: var(--card-bg);
+    color: var(--text-secondary);
+    cursor: not-allowed;
+    border: 1px solid var(--card-border);
+}
+
+.btn-stop {
+    background: #ef4444;
+    color: white;
+}
+
+.btn-stop:hover {
+    background: #dc2626;
+    box-shadow: 0 0 15px rgba(239, 68, 68, 0.4);
+}
+
+.sim-progress {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.progress-text {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    text-align: right;
+}
