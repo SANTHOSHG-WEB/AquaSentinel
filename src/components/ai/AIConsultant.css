@@ -19,7 +19,7 @@
 .btn-start-analysis {
     margin-top: 1.5rem;
     padding: 12px 32px;
-    background: #3AA6B9;
+    background: var(--accent);
     color: white;
     border: none;
     border-radius: 12px;
@@ -33,9 +33,9 @@
 }
 
 .btn-start-analysis:hover {
-    background: #2D8E9F;
+    filter: brightness(1.1);
     transform: scale(1.05);
-    box-shadow: 0 0 20px rgba(58, 166, 185, 0.4);
+    box-shadow: 0 0 20px rgba(249, 115, 22, 0.4);
 }
 
 @keyframes fadeIn {
@@ -287,7 +287,7 @@
 }
 
 .btn-apply {
-    background: #3AA6B9;
+    background: var(--accent);
     color: white;
     border: none;
     padding: 6px 16px;
@@ -302,7 +302,7 @@
 }
 
 .btn-apply:hover {
-    background: #2D8E9F;
+    filter: brightness(1.1);
     transform: translateX(4px);
 }
 

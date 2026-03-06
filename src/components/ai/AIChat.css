@@ -9,8 +9,8 @@
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    background: linear-gradient(135deg, #3AA6B9 0%, #0A2472 100%);
-    border: 2px solid rgba(255, 255, 255, 0.2);
+    background: var(--accent);
+    border: 2px solid var(--card-border);
     color: white;
     cursor: pointer;
     display: flex;
@@ -214,7 +214,7 @@
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background: #3AA6B9;
+    background: var(--accent);
     border: none;
     color: white;
     cursor: pointer;
@@ -225,7 +225,7 @@
 }
 
 .chat-input-area button:hover:not(:disabled) {
-    background: #2D8E9F;
+    filter: brightness(1.1);
     transform: scale(1.05);
 }
 

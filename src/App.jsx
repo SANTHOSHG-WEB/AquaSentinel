@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 import Dashboard from './components/dashboard/Dashboard'
 import Login from './components/auth/Login'
 import Signup from './components/auth/Signup'
-import WaterBackground from './components/common/WaterBackground'
+
 import './styles/index.css'
 import { supabase } from './utils/supabase'
 
@@ -52,7 +52,7 @@ function App() {
   return (
     <Router>
       <div className="app">
-        <WaterBackground />
+
         <Routes>
           <Route
             path="/login"
