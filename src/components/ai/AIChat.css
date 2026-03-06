@@ -66,7 +66,7 @@
 
 .chat-header {
     padding: 20px;
-    background: rgba(14, 165, 233, 0.05);
+    background: rgba(16, 185, 129, 0.05);
     border-bottom: 1px solid var(--card-border);
     display: flex;
     justify-content: space-between;
@@ -80,7 +80,7 @@
 }
 
 .bot-icon {
-    color: #3AA6B9;
+    color: var(--primary);
 }
 
 .bot-info h3 {
@@ -150,7 +150,7 @@
 }
 
 .assistant .avatar {
-    background: rgba(14, 165, 233, 0.1);
+    background: rgba(16, 185, 129, 0.1);
     color: var(--secondary);
 }
 
@@ -168,13 +168,13 @@
 }
 
 .assistant .message-bubble {
-    background: rgba(14, 165, 233, 0.05);
+    background: rgba(16, 185, 129, 0.05);
     color: var(--text-primary);
     border-bottom-left-radius: 4px;
 }
 
 .user .message-bubble {
-    background: linear-gradient(135deg, #0ea5e9 0%, #0f172a 100%);
+    background: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%);
     color: white;
     border-bottom-right-radius: 4px;
 }
@@ -189,7 +189,7 @@
 
 .chat-input-area {
     padding: 16px;
-    background: rgba(14, 165, 233, 0.05);
+    background: rgba(16, 185, 129, 0.05);
     display: flex;
     gap: 10px;
 }

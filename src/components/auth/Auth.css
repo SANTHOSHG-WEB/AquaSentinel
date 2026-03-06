@@ -31,7 +31,7 @@
 }
 
 .auth-header p {
-    color: rgba(255, 255, 255, 0.7);
+    color: var(--text-secondary);
     font-size: 0.9rem;
 }
 
@@ -45,21 +45,21 @@
     position: relative;
     display: flex;
     align-items: center;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: var(--background);
+    border: 1px solid var(--card-border);
     border-radius: 12px;
     padding: 0 15px;
     transition: all 0.3s ease;
 }
 
 .input-group:focus-within {
-    border-color: var(--primary-color, #00d2ff);
-    background: rgba(255, 255, 255, 0.1);
-    box-shadow: 0 0 15px rgba(0, 210, 255, 0.2);
+    border-color: var(--primary);
+    background: #ffffff;
+    box-shadow: 0 0 15px rgba(4, 120, 87, 0.1);
 }
 
 .input-group svg {
-    color: rgba(255, 255, 255, 0.5);
+    color: var(--text-secondary);
 }
 
 .input-group input {
@@ -67,7 +67,7 @@
     background: transparent;
     border: none;
     padding: 15px 10px;
-    color: white;
+    color: var(--text-primary);
     font-size: 1rem;
     outline: none;
 }
@@ -110,11 +110,11 @@
 .auth-footer {
     margin-top: 25px;
     font-size: 0.9rem;
-    color: rgba(255, 255, 255, 0.6);
+    color: var(--text-secondary);
 }
 
 .auth-footer a {
-    color: var(--primary-color, #00d2ff);
+    color: var(--secondary);
     text-decoration: none;
     font-weight: 600;
 }
@@ -127,5 +127,5 @@
     margin-top: 15px;
     font-size: 0.8rem;
     font-style: italic;
-    color: rgba(255, 255, 255, 0.4);
+    color: var(--text-secondary);
 }
