@@ -5,38 +5,53 @@ import './SmartAvatar.css';
 const SmartAvatar = ({ state = 'healthy', message = '' }) => {
     const getAvatarEmoji = () => {
         switch (state) {
-            case 'weak': return '🥀';
-            case 'warning': return '⚠️';
-            case 'super': return '⚡';
-            default: return '🌿';
+            case 'critical': return '🥵'; // Low water urgency
+            case 'warning': return '💧';  // Medium/Normal
+            case 'super': return '😎';    // Full tank cool
+            default: return '💧';
         }
     };
 
     const getAuraColor = () => {
         switch (state) {
-            case 'weak': return 'rgba(239, 68, 68, 0.3)';
-            case 'warning': return 'rgba(234, 179, 8, 0.3)';
-            case 'super': return 'rgba(168, 85, 247, 0.3)';
-            default: return 'rgba(34, 197, 94, 0.3)';
+            case 'critical': return 'rgba(239, 68, 68, 0.4)'; // Red pulse
+            case 'warning': return 'rgba(249, 115, 22, 0.3)'; // Orange accent pulse
+            case 'super': return 'rgba(16, 185, 129, 0.4)';  // Green powerful pulse
+            default: return 'rgba(16, 185, 129, 0.3)';
         }
     };
+
+    const getAnimationProps = () => {
+        switch (state) {
+            case 'critical':
+                return { duration: 0.8, yRange: [0, -15, 0], scaleRange: [1, 1.3, 1] }; // Fast panic
+            case 'warning':
+                return { duration: 2.5, yRange: [0, -8, 0], scaleRange: [1, 1.15, 1] }; // Chill float
+            case 'super':
+                return { duration: 1.5, yRange: [0, -12, 0], scaleRange: [1, 1.25, 1] }; // Powerful bounce
+            default:
+                return { duration: 2.5, yRange: [0, -8, 0], scaleRange: [1, 1.15, 1] };
+        }
+    };
+
+    const animConfig = getAnimationProps();
 
     return (
         <div className="avatar-container">
             <motion.div
                 className="avatar-aura"
                 animate={{
-                    scale: [1, 1.2, 1],
-                    opacity: [0.5, 0.8, 0.5]
+                    scale: animConfig.scaleRange,
+                    opacity: [0.4, 0.8, 0.4]
                 }}
-                transition={{ duration: 3, repeat: Infinity }}
+                transition={{ duration: animConfig.duration, repeat: Infinity, ease: "easeInOut" }}
                 style={{ backgroundColor: getAuraColor() }}
             />
             <motion.div
                 className="avatar-face"
                 whileHover={{ scale: 1.1 }}
-                animate={{ y: [0, -10, 0] }}
-                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                animate={{ y: animConfig.yRange }}
+                transition={{ duration: animConfig.duration, repeat: Infinity, ease: "easeInOut" }}
             >
                 <span className="avatar-emoji">{getAvatarEmoji()}</span>
             </motion.div>

@@ -49,8 +49,11 @@ const Dashboard = ({ onLogout }) => {
         <div className="dashboard-grid tab-content active">
             <GlassCard className="avatar-card" delay={50}>
                 <SmartAvatar
-                    state={data.tankLevel < 20 ? 'weak' : (data.isRaining ? 'super' : 'healthy')}
-                    message={data.tankLevel < 20 ? "I'm so thirsty! Please fill the tank." : (data.isRaining ? "Yay! Rainwater harvesting active!" : "Great job saving water today!")}
+                    state={data.tankLevel < 20 ? 'critical' : (data.tankLevel > 70 ? 'super' : 'warning')}
+                    message={
+                        data.tankLevel < 20 ? "I'm so thirsty! Please fill the tank!" :
+                            (data.tankLevel > 70 ? "Tank is full! I feel powerful!" : "Water levels are looking good!")
+                    }
                 />
             </GlassCard>
 
